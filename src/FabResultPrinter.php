@@ -9,8 +9,6 @@
  * file that was distributed with this source code.
  */
 
-namespace NyanCat\PHPunit;
-
 /**
  * Mmmm poptarts...
  *
@@ -21,7 +19,7 @@ namespace NyanCat\PHPunit;
  *
  * @author Jeff Welch <whatthejeff@gmail.com>
  */
-class ResultPrinter extends \PHPUnit_TextUI_ResultPrinter
+class FabResultPrinter extends \PHPUnit_TextUI_ResultPrinter
 {
     /**
      * Ansi escape
@@ -106,7 +104,7 @@ class ResultPrinter extends \PHPUnit_TextUI_ResultPrinter
     public function __construct($out = NULL, $verbose = FALSE, $colors = FALSE, $debug = FALSE)
     {
         $term = empty($_SERVER['TERM']) ? 'unknown' : $_SERVER['TERM'];
-        $this->fab = \Fab\Factory::getFab($term);
+        $this->fab = FabFactory::getFab($term);
 
         for ($i = 0; $i < $this->numberOfLines; $i++) {
             $this->trajectories[] = array();

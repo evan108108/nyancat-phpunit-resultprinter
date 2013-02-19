@@ -6,12 +6,12 @@
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
-         printerFile="src/NyanCat/PHPUnit/ResultPrinter.php"
-         printerClass="NyanCat\PHPunit\ResultPrinter"
+         printerFile="src/FabResultPrinter.php"
+         printerClass="FabResultPrinter"
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="false"
-         bootstrap="vendor/autoload.php"
+				 bootstrap="../tests/bootstrap.php"
 >
     <testsuites>
         <testsuite name="Nyan Cat result printer for PHPUnit Test Suite">
